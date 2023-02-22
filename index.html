@@ -5,92 +5,119 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="assets/reset.css" rel="stylesheet">
 		<link href="assets/common.css" rel="stylesheet">
+        <script defer src="assets/arena.js"></script>
+        
 	</head>
 
 
 <body>
-    <header>Texture </header>
+    <div class="bg"></div>
+
+
+		
+			<!-- Replace this URL with your channel to connect the API! -->
+			<a href="https://www.are.na/kinjal-gawaskar/texture-tales" id="channel-url">
+				 <!-- The channel title will be inserted inside this h1. -->
+			</a>
+	
+
+
+
     <br>
-    <div class="title">
-        <div class="header">Tales</div>
-        <div class="description">
-        <h1><strong>Description</strong></h1>
-        <p>Art narrated through an immersive journey into the world of Texture. Explore & experience many forms and expressions of myriad textures through audio & visuals that evoke a sense of surface & touch!</p>
+    <div class="maintitle">
+        <div class="header">Texture <br>Tales</div>
+        <div class="channel-description"></div> <!-- Same here for the channel description. -->
         </div>
     </div>
     <br>
    
 
-    <div class="swiper">
-        <div class="left">
-            <img src="toLeftPage.png" alt="" style="width: 100%; height: 100%;">
-        </div> 
-        <div class="video-carousel">
-            <img class="vid" src="original_2275a7d60fbe057cace74a269e7a9bf5.jpg" width="200px">
-            <img class="vid" src="WechatIMG1395.jpeg" width="200px">
-            <img class="vid" src="WechatIMG1395.jpeg" width="200px">
-            <img class="vid" src="WechatIMG1395.jpeg" width="200px">
-        </div>
-        <div class="right">
-            <img src="toRightPage.png" alt="" style="width: 100%; height: 100%;">
-        </div>
-    </div>
-    <br> 
-    <div class="swiper2">
-        <div class="left">
-            <img src="toLeftPage.png" alt="" style="width: 100%; height: 100%;">
-        </div> 
-        <div class="img-carousel">
-            <img class="block" src="original_2275a7d60fbe057cace74a269e7a9bf5.jpg" height="150px">
-            <img class="block" src="original_1b809abd7da5eeb8e1b3c4cc5f7efc7f.jpeg" height="150px">
-            <img class="block" src="original_e9fef66ad562582d4b264d1378cb3ef1.jpeg" height="150px">
-            <img class="block" src="original_e9fef66ad562582d4b264d1378cb3ef1.jpeg" height="150px">
-            <img class="block" src="original_e9fef66ad562582d4b264d1378cb3ef1.jpeg" height="150px">
-            <img class="block" src="original_e9fef66ad562582d4b264d1378cb3ef1.jpeg" height="150px">
-        </div>
-        <div class="right">
-            <img src="toRightPage.png" alt="" style="width: 100%; height: 100%;">
-        </div>
-    </div>
-
-    <div class="swiper2">
-        <div class="left">
-            <img src="toLeftPage.png" alt="" style="width: 100%; height: 100%;">
-        </div> 
-        <div class="img-carousel">
-            <img class="block" src="original_8d29237bb703ac3d310b7bfc10548a4f.jpeg" height="150px">
-            <img class="block" src="original_8007f0f6bc489cf19af9b0ca5535b093.webp" height="150px">
-            <img class="block" src="original_1b809abd7da5eeb8e1b3c4cc5f7efc7f.jpeg" height="150px">
-            <img class="block" src="original_fb4a15ad70425c42575e1220330d4716.jpeg" height="150px">
-            <img class="block" src="original_fba29a695dc832508f2f0d394eab33a5.jpeg" height="150px">
-            <img class="block" src="original_48fac7cd05fa5cdf84166e8345981dc1.jpeg" height="150px">
-            <img class="block" src="original_fb4a15ad70425c42575e1220330d4716.jpeg" height="150px">
-            
-        </div>
-        <div class="right">
-            <img src="toRightPage.png" alt="" style="width: 100%; height: 100%;">
-        </div>
-    </div>
-
-    <div class="swiper2">
-        <div class="left">
-            <img src="toLeftPage.png" alt="" style="width: 100%; height: 100%;">
-        </div> 
-        <div class="img-carousel">
-            <img class="block" src="original_2275a7d60fbe057cace74a269e7a9bf5.jpg" height="150px">
-            <img class="block" src="original_1b809abd7da5eeb8e1b3c4cc5f7efc7f.jpeg" height="150px">
-            <img class="block" src="original_e9fef66ad562582d4b264d1378cb3ef1.jpeg" height="150px">
-            <img class="block" src="original_e9fef66ad562582d4b264d1378cb3ef1.jpeg" height="150px">
-            <img class="block" src="original_e9fef66ad562582d4b264d1378cb3ef1.jpeg" height="150px">
-            <img class="block" src="original_e9fef66ad562582d4b264d1378cb3ef1.jpeg" height="150px">
-        </div>
-        <div class="right">
-            <img src="toRightPage.png" alt="" style="width: 100%; height: 100%;">
-        </div>
-    </div>
+    <section>
+        
+        <!-- All the channel “blocks” will be created as children, here. -->
+        <!-- You could move the classes to different section elements to separate the types! -->
+        <ul class="text-blocks">
+        </ul>
     
-    
+    </section>
 
+    <section>
+
+        <!-- All the channel “blocks” will be created as children, here. -->
+        <!-- You could move the classes to different section elements to separate the types! -->
+        <ul class="image-blocks">
+        </ul>
+
+    </section>
+
+
+
+
+    <template id="image-block">
+       
+        <figure class="image-block">
+            <h3 class="title"></h3>
+            <picture>
+                <source class="image-thumb">
+                <source class="image-square">
+                <source class="image-display">
+                <img class="image">
+            </picture>
+            <figcaption class="description"></figcaption>
+        
+        </figure>
+   
+        
+    </template>
+
+    <template id="text-block">
+      
+            <figure class="text-block">
+                <h3 class="title"></h3>
+                <div class="content"></div> <!-- Text blocks insert their HTML here. -->
+                <figcaption class="description"></figcaption>
+                <p class="time-created"></p>
+            </figure>
+    
+    </template>
+
+    <template id="channel-owner">
+
+            <img class="avatar"> <!-- Avatar image source inserts here. -->
+            <a class="link"> <!-- Link to their profile inserts here. -->
+                <p class="full-name"></p> <!-- Username inserts here. -->
+            </a>
+
+    </template>
+    
+    <template id="audio-embed-block">
+
+            <figure class="audio-embed"> <!-- You can use the container classes to style a whole type. -->
+                <h3 class="ititle"></h3> <!-- Block title inserts here. -->
+                <picture>
+                    <source class="image-square">
+                    <source class="image-display">
+                    <img class="image"> <!-- Largest image/cover source inserts here. -->
+                </picture>
+                <div class="embed"></div> <!-- Embed iframe inserts here. -->
+                </a>
+                <figcaption class="description"></figcaption> <!-- Block description inserts here. -->
+                <p class="time-created"></p> <!-- And first created. -->
+            </figure>
+
+    </template>
+
+    <!-- Uploaded video files. -->
+    <template id="video-file-block">
+        <div class="liangpai2">
+        <h3 class="title"></h3>
+            <figure class="video-file-block">
+                <video class="video" controls></video>
+            </figure>
+            <p class="time-created"></p>
+        </div>
+    </template>
+    
 
 </body>
 
