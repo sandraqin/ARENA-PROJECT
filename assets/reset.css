@@ -179,7 +179,8 @@ img:hover{
     align-items: center;
     width: 90%;
 
-    margin: 0;
+    margin-top: 450px;
+    margin-bottom: 0px;
     white-space: break-spaces;
     flex-wrap: wrap;
     flex-direction: row;
