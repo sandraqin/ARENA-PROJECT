@@ -30,21 +30,14 @@ body {
         margin-top:0;}
 }
 
+
+    
+
+
 body{
     margin: 10px;
     height:100%;
 }
-
-header{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 800;
-    font-size: calc(var(--base) * 10);
-    line-height: 200px;
-    
-    text-transform: uppercase;
-    mix-blend-mode:multiply;
- }
 
 
 h1{
@@ -60,6 +53,7 @@ mix-blend-mode: multiply;
 width:100%;
 height:100%;
 background-color: #a5a0957b;
+<<<<<<< HEAD
 
 top: 0;
 left: 0;
@@ -83,10 +77,38 @@ font-size: calc(var(--base) * 2);
 
 
 mix-blend-mode:multiply;
+=======
+
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+>>>>>>> 1182464917f8e54585d7fc70dc2e9eb77a71507c
 }
 
 
 
+<<<<<<< HEAD
+=======
+
+.header{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+
+line-height: 30px;
+
+
+text-transform: lowercase;
+font-size: calc(var(--base) * 2);
+
+
+mix-blend-mode:difference;
+}
+
+
+
+>>>>>>> 1182464917f8e54585d7fc70dc2e9eb77a71507c
 .channel-description{
     font-family: 'Roboto';
     font-size: calc(var(--base) * 0.8);
@@ -94,14 +116,26 @@ mix-blend-mode:multiply;
     padding-right:calc(var(--base)*5);
     font-weight: 200;
     line-height: 101%;
+<<<<<<< HEAD
     width:30%;
     
+=======
+    width:40%;
+
+    top:15%;
+    position:fixed;
+    mix-blend-mode:difference;
+>>>>>>> 1182464917f8e54585d7fc70dc2e9eb77a71507c
 }
-.title{
+.maintitle{
     display:flex;
     flex-direction: column;
     gap:20px;
     align-items:flex-start;
+<<<<<<< HEAD
+=======
+    position:fixed;
+>>>>>>> 1182464917f8e54585d7fc70dc2e9eb77a71507c
 }
 
 .video-carousel{
@@ -171,13 +205,35 @@ img:hover{
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(0%);
   opacity: 1;
+<<<<<<< HEAD
   transform: scale(1.8)
+=======
+  transform: scale(1.6)
+>>>>>>> 1182464917f8e54585d7fc70dc2e9eb77a71507c
 }
 
-.img-carousel{
-  transition: transform 0.3s;
+
+.image-blocks{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 90%;
+
+    margin-top: 450px;
+    margin-bottom: 0px;
+    white-space: break-spaces;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) blur(5px);
+    opacity: 0.5;
+    transition: 0.3s;
+    transition: transform 0.3s;
 }
 
+<<<<<<< HEAD
 .img-carousel:hover{
   transform: scale(1.05)
 }
@@ -195,6 +251,13 @@ img:hover{
     padding-left:0;
     margin:0;
     white-space: break-spaces;
+=======
+.image-blocks:hover{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  opacity: 1;
+
+>>>>>>> 1182464917f8e54585d7fc70dc2e9eb77a71507c
 }
 
 .text-blocks{
@@ -206,6 +269,7 @@ img:hover{
     width:90%;
     overflow-y: scroll;
     padding-left:0;
+<<<<<<< HEAD
 }
 .liangpai{
     display:flex;
@@ -213,6 +277,13 @@ img:hover{
     white-space: normal;
     
 }
+=======
+    top:30%;
+    position:fixed;
+}
+
+
+>>>>>>> 1182464917f8e54585d7fc70dc2e9eb77a71507c
 
 h3{
     font-family: 'Roboto';
@@ -280,6 +351,7 @@ video.video:hover{
     transform: scale(1.3) 
 }
 
+<<<<<<< HEAD
 .liangpai2{
     display:flex;
     flex-direction: column;
@@ -288,4 +360,77 @@ video.video:hover{
     width:90%;
     overflow-x: auto;
 
+=======
+.title{
+    padding-left:40px;
+    margin:0;
+}
+
+
+
+@media (max-width: 430px) {
+    :root {
+        --base: 20px;
+        margin-top:0
+    }
+
+    html,body{
+        height: 100%;
+        margin-top:0;}
+
+    .header{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+            
+    line-height: calc(var(--base) * 2);
+            
+            
+    text-transform: lowercase;
+    font-size: calc(var(--base) * 2.5);
+            
+            
+    mix-blend-mode:difference;
+    }
+           
+    .channel-description{
+    font-family: 'Roboto';
+    font-size: calc(var(--base) * 0.7);
+    font-weight: 200;
+    line-height: 101%;
+    width:60%;
+
+    top:15%;
+    position:fixed;
+    mix-blend-mode:difference;}
+
+
+
+    .text-blocks{
+    display:flex;
+    gap:10px;
+    align-items: center;
+    font-size: calc(var(--base) * 0.5);
+
+    white-space: normal;
+    width:70%;
+    padding-left:0;
+    top:35%;
+    position:fixed;
+
+    img:hover{
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.4)
+    }
+    
+    img:click{
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.4)
+    }
+}
+>>>>>>> 1182464917f8e54585d7fc70dc2e9eb77a71507c
 }
