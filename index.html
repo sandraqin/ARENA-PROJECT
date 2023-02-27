@@ -6,6 +6,7 @@
 		<link href="assets/reset.css" rel="stylesheet">
 		<link href="assets/common.css" rel="stylesheet">
         <script defer src="assets/arena.js"></script>
+        <script defer src="assets/main.js"></script>
         
 	</head>
 
@@ -31,6 +32,15 @@
     </div>
     <br>
    
+    <section>
+
+        <!-- All the channel “blocks” will be created as children, here. -->
+        <!-- You could move the classes to different section elements to separate the types! -->
+        <ul class="image-blocks"></ul>
+
+
+
+    </section>
 
     <section>
         
@@ -45,37 +55,30 @@
 
         <!-- All the channel “blocks” will be created as children, here. -->
         <!-- You could move the classes to different section elements to separate the types! -->
-        <ul class="video-file-blocks">
+        <ul class="video-file-blocks video-embed-blocks audio-file-blocks">
         </ul>
 
     </section>
 
-    <section>
 
-        <!-- All the channel “blocks” will be created as children, here. -->
-        <!-- You could move the classes to different section elements to separate the types! -->
-        <ul class="image-blocks">
-        </ul>
-
-    </section>
 
 
 
 
     <template id="image-block">
-       
-        <figure class="image-block">
-            <h3 class="title"></h3>
-            <picture>
-                <source class="image-thumb">
-                <source class="image-square">
-                <source class="image-display">
+        <li class="image-block ">
+            <figure class="text-block">
+            <div class="together">
+            <img class="image">
+            <figcaption class="title"></figcaption></div>
+            </figure>
+
+            <aside>
                 <img class="image">
-            </picture>
-            <figcaption class="description"></figcaption>
+            </aside>
+    
+        </li>
         
-        </figure>
-   
         
     </template>
 
@@ -85,7 +88,6 @@
                 <h3 class="title"></h3>
                 <div class="content"></div> <!-- Text blocks insert their HTML here. -->
                 <figcaption class="description"></figcaption><br>
-                <p class="time-created"></p>
             </figure>
     
     </template>
@@ -99,21 +101,16 @@
 
     </template>
     
-    <template id="audio-embed-block">
-
-            <figure class="audio-embed"> <!-- You can use the container classes to style a whole type. -->
-                <h3 class="ititle"></h3> <!-- Block title inserts here. -->
+    <template id="audio-file-block">
+        <li>
+            <figure class="audio-file-block">
+                
                 <picture>
-                    <source class="image-square">
-                    <source class="image-display">
-                    <img class="image"> <!-- Largest image/cover source inserts here. -->
+                    <img class="playicon" src="assets/download2-01.png">
                 </picture>
-                <div class="embed"></div> <!-- Embed iframe inserts here. -->
-                </a>
-                <figcaption class="description"></figcaption> <!-- Block description inserts here. -->
-                <p class="time-created"></p> <!-- And first created. -->
-            </figure>
 
+            </figure>
+        </li>
     </template>
 
     <template id="video-file-block">
@@ -125,130 +122,22 @@
 
     </template>
 
+    <template id="video-embed-block">
+        <li>
+            <figure class="video-embed-block">
+            
+                <a class="link" target="_blank"><img class="image">
+                </a>
+            </figure>
+        </li>
+    </template>
+
+
+ 
+
     
 
 </body>
 
-<style>
-    @media (max-width: 500px) {
-        :root {
-        --base: 20px;
-        margin-top:0
-    }
-
-    html,body{
-        height: 100%;
-        margin-top:0;
-    }
-
-    .header{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 600;
-            
-    line-height: calc(var(--base) * 2);
-            
-            
-    text-transform: lowercase;
-    font-size: calc(var(--base) * 2.5);
-            
-            
-    mix-blend-mode:difference;
-    }
-           
-    .channel-description{
-        font-family: 'Roboto';
-        font-size: calc(var(--base) * 0.6);
-        padding-top:calc(var(--base)*0.8);
-        padding-bottom:calc(var(--base)*0.8);
-        padding-right:calc(var(--base)*3);
-        font-weight: 200;
-        line-height: 101%;
-        width:65%;
-    
-        top:15%;
-        position:fixed;
-        mix-blend-mode:difference;
-    }
-
-
-    .maintitle{
-        display:flex;
-        flex-direction: column;
-        gap:20px;
-        align-items:flex-start;
-        position:fixed;
-    }
-
-
-    .text-blocks{
-    display:flex;
-    gap:10px;
-    align-items: center;
-
-    white-space: normal;
-    width:70%;
-    padding-left:0;
-    
-    bottom:0%;
-    position:fixed;
-    }
-
-    .content{
-    font-size: calc(var(--base) * 0.5);
-    }
-    
-
-    .image-blocks{
-        display: flex;
-        flex-direction: column;
- 
-        gap: 10px;
-        align-items: flex-end;
-        width: 90%;
-
-        padding-top: 470px;
-        padding-left: 120px;
-        padding-right:20px;
-
-    }
-
-
-
-    .image-block:hover{
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(0%) blur(0);
-        opacity: 1;
-        transform: scale(1.3)  
-    }
-
-    .video-file-blocks {
-    bottom:0%;
-    width:130%;
-    gap:20px;
-    z-index: 2;
-    transform-origin: bottom left;
-}
-
-    .video-file-block {
-    clip-path: circle(9%);
-    overflow-x: hidden;
-    overflow-y: hidden;
-    }   
-
-    video.video {
-    height: 320px;
-    width: 180px;
-
-    }
-
-    h3{
-    font-family: 'Roboto';
-    font-size: calc(var(--base) * 0.4);
-    font-weight: 200;
-    line-height: 101%;
-}
-}
-</style>
 
 </html>
