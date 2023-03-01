@@ -90,6 +90,7 @@ body {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
+
     
     line-height: 30px;
     
@@ -112,14 +113,14 @@ body {
         line-height: 102%;
         width:30vw;
     
-        top:15%;
-        padding-top: var(--page-spacing);
-        position:fixed;
-        mix-blend-mode:difference;
+    
+        padding-top: var(--base);
+    
     }
 
     .maintitle{
         display:flex;
+        position:fixed;
         flex-direction: column;
         gap:20px;
         align-items:flex-start;
@@ -149,7 +150,7 @@ body {
         gap: 50px;
         width: 70vw;
         height:100vh;
-        margin-bottom:var(--page-spacing);
+        margin-bottom:var(--base);
     
     }
     
@@ -174,10 +175,11 @@ body {
       
     }
 
-
-    ul.image-blocks > li:not(:first-child){
-
+    .image-block{
+        padding-bottom:20px;
     }
+
+
 
     .image-block aside {
         display:none;
@@ -361,6 +363,12 @@ body {
         transform-origin: bottom left;
     }
     
+
+    .video-file-block{
+        border-radius:50%;
+    }
+
+
     .video-file-block,
     .audio-file-block,
     .video-embed-block,
@@ -635,7 +643,9 @@ body {
     .together:hover{
 
         animation-name: disappear;
-        animation-timing-function: ease;}
+        animation-timing-function: ease;
+        transform-origin: bottom right;
+    }
 
 
 
