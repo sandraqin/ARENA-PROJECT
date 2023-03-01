@@ -42,23 +42,18 @@
 
     </section>
 
+
+
     <section>
+
+        <!-- All the channel “blocks” will be created as children, here. -->
+        <!-- You could move the classes to different section elements to separate the types! -->
         
-        <!-- All the channel “blocks” will be created as children, here. -->
-        <!-- You could move the classes to different section elements to separate the types! -->
-        <ul class="text-blocks">
-        </ul>
-    
-    </section>
-
-    <section>
-
-        <!-- All the channel “blocks” will be created as children, here. -->
-        <!-- You could move the classes to different section elements to separate the types! -->
-        <ul class="video-file-blocks video-embed-blocks audio-file-blocks">
+        <ul class="video-file-blocks video-embed-blocks audio-file-blocks text-blocks">
         </ul>
 
     </section>
+
 
 
 
@@ -67,14 +62,17 @@
 
     <template id="image-block">
         <li class="image-block ">
-            <figure class="text-block">
-            <div class="together">
-            <img class="image">
-            <figcaption class="title"></figcaption></div>
+            <figure class="image-block">
+                <div class="together">
+                    <img class="image">
+                    <figcaption class="title"></figcaption>
+                </div>
             </figure>
 
             <aside>
+                <p class="caption"> click more images to overlap texture<br>click the empty space to clean texture</p>
                 <img class="image">
+                
             </aside>
     
         </li>
@@ -83,13 +81,16 @@
     </template>
 
     <template id="text-block">
+        <li class="text-block">
       
             <figure class="text-block">
-                <h3 class="title"></h3>
-                <div class="content"></div> <!-- Text blocks insert their HTML here. -->
-                <figcaption class="description"></figcaption><br>
+                <img class="play"  src="assets/download4-01-02.png" >
             </figure>
-    
+
+            <aside>
+                <div class="content"></div>
+            </aside>
+        </li>
     </template>
 
     <template id="channel-owner">
@@ -102,33 +103,46 @@
     </template>
     
     <template id="audio-file-block">
-        <li>
-            <figure class="audio-file-block">
-                
-                <picture>
-                    <img class="playicon" src="assets/download2-01.png">
-                </picture>
+        <li class="audio-file-block">
+            <figure class="audio-file-block" >
 
+                <img class="play"  src="assets/download2-01.png" >
+            
             </figure>
+            <aside>
+                <figcaption class="title"></figcaption>
+                <audio class="audio" controls type="audio/mpeg"></audio>
+            </aside>
+           
         </li>
     </template>
 
     <template id="video-file-block">
         
-       
-        <figure class="video-file-block">
-            <video class="video" controls></video>
-        </figure>
-
+        <li class="video-file-block">
+            <figure class="video-file-block" >
+                <video class="video" controls muted onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;"></video>
+            </figure>
+         
+            <aside>
+                <video class="video" onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" controls></video>
+            </aside>
+            
+        
+        </li>
     </template>
 
     <template id="video-embed-block">
-        <li>
+        <li class="video-embed-block">
             <figure class="video-embed-block">
-            
-                <a class="link" target="_blank"><img class="image">
-                </a>
+                <img class="image">
+                
+                
             </figure>
+            <aside>
+                <div class="embed"></div>
+            </aside>
+            
         </li>
     </template>
 

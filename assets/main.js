@@ -21,4 +21,89 @@ window.arenaCallback = () => {
 			block.classList.remove('active')
 		}
 	})
+
+	let videofileBlocks = document.querySelectorAll('li.video-file-block')
+
+	// Go through all of my image blocks
+	videofileBlocks.forEach((block) => {
+		// Make the blocks react on click
+
+		// Target the figure element of the block
+		block.querySelector('figure').onclick = () => {
+			// Add a class called active
+			block.classList.add('active')
+		}
+
+		// Target the aside element of the block
+		block.querySelector('aside').onclick = () => {
+			// Remove a class called active
+			block.classList.remove('active')
+		}
+	})
+
+
+	let videoembedBlocks = document.querySelectorAll('li.video-embed-block')
+
+	// Go through all of my image blocks
+	videoembedBlocks.forEach((block) => {
+		// Make the blocks react on click
+
+		// Target the figure element of the block
+		block.querySelector('figure').onclick = () => {
+			// Add a class called active
+			block.classList.add('active')
+		}
+
+		// Target the aside element of the block
+		block.querySelector('aside').onclick = () => {
+			// Remove a class called active
+			block.classList.remove('active')
+		}
+	})
+
+	let textBlocks = document.querySelectorAll('li.text-block')
+
+	// Go through all of my image blocks
+	textBlocks.forEach((block) => {
+		// Make the blocks react on click
+
+		// Target the figure element of the block
+		block.querySelector('figure').onclick = () => {
+			// Add a class called active
+			block.classList.add('active')
+		}
+
+		// Target the aside element of the block
+		block.querySelector('aside').onclick = () => {
+			// Remove a class called active
+			block.classList.remove('active')
+		}
+	})
+
+
+	let audiofileBlocks = document.querySelectorAll('li.audio-file-block')
+
+	// Go through all of my image blocks
+	audiofileBlocks.forEach((block) => {
+		// Make the blocks react on click
+
+		// Target the figure element of the block
+		block.querySelector('figure').onclick = () => {
+			// Add a class called active
+			block.classList.add('active')
+		}
+
+		// Target the aside element of the block
+		block.querySelector('aside').onclick = () => {
+			// Remove a class called active
+			block.classList.remove('active')
+		}
+	})
+
+
+
+	var audio = document.getElementById("audio");
+  	audio.volume = 0.2;
+	var vid = document.getElementById("video");
+  	audio.volume = 0.2;
 }
