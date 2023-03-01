@@ -25,11 +25,7 @@ ul {
 	list-style: none;
 }
 
-audio,
-img,
-video {
-	max-width: 100%;
-}
+
 
 table {
 	border-collapse: collapse;

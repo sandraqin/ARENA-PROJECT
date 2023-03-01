@@ -84,7 +84,22 @@ body {
     }
     
     
-    
+    .arena{
+        display:flex;
+        position:fixed;
+        right:0;
+        padding:20px;
+        padding-top:5px;
+
+        font-weight: 200;
+        font-size: calc(var(--base) * 0.8);
+
+        z-index: 4;
+    }
+
+    .arena:hover{
+        text-decoration: underline;
+    }
     
     .header{
     font-family: 'Roboto';
@@ -98,8 +113,7 @@ body {
     text-transform: lowercase;
     font-size: calc(var(--base) * 2);
     
-    
-    mix-blend-mode:difference;
+  
     }
     
     
@@ -120,7 +134,6 @@ body {
 
     .maintitle{
         display:flex;
-        position:fixed;
         flex-direction: column;
         gap:20px;
         align-items:flex-start;
@@ -499,6 +512,10 @@ body {
         height:70px;
 
     }
+
+    img.play:hover{
+        filter:saturate(5);
+    }
    
 }
    
@@ -783,8 +800,8 @@ body {
 
     audio{
         inset:0;
-        width:80vw;
-        filter: grayscale(100%)blur(1px);
+        width:100vw;
+        filter: grayscale(100%)blur(0px);
         opacity:80%;
     }
 
